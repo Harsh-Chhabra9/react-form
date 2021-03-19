@@ -14,7 +14,6 @@ class App extends Component{
   handleAdd=async e=>{
     console.log(e.target.name); 
     this.setState({
-       
       [e.target.name]:e.target.value
     })
     
@@ -25,7 +24,7 @@ class App extends Component{
     console.log(this.state.email);
     console.log(this.state.password);
     let formData =new FormData();
-    formData.append("name",this.state.name);
+    formData.append("name",this.state.name1);
     formData.append("email",this.state.email);
     formData.append("password",this.state.password);
     const url="http://localhost:8080/react/";
